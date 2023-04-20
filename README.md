@@ -56,18 +56,8 @@ Release/X.X.X : pour staging vers master (prod)
 
 ```shell
 ├── .github
-├── src
-│   ├── assets
-│   ├── components
-│   ├── configs
-│   ├── features
-│   ├── hooks
-│   ├── layouts
-│   ├── pages
-│   ├── services
-│   ├── types
-│   ├── index.tsx
-│   └── App.tsx
+├── client
+├── server
 ├── package.json
 ├── .env.example
 ├── .eslintrc.js
