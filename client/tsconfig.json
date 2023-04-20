@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "ESNext",
+        "strict": true,
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "useUnknownInCatchVariables": false,
+        "useDefineForClassFields": true,
+        "esModuleInterop": true,
+        "isolatedModules": false,
+        "jsx": "react-jsx",
+        "types": ["node", "vite/client"],
+        "typeRoots": ["node_modules/@types", "src/types"],
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "moduleResolution": "node",
+        "noEmit": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@assets/*": ["src/assets/*"],
+            "@components/*": ["src/components/*"],
+            "@configs/*": ["src/configs/*"],
+            "@features/*": ["src/features/*"],
+            "@hooks/*": ["src/hooks/*"],
+            "@layouts/*": ["src/layouts/*"],
+            "@pages/*": ["src/pages/*"],
+            "@services/*": ["src/services/*"],
+            "@utils/*": ["src/utils/*"],
+            "@/types/*": ["src/types/*"],
+            "@src/*": ["src/*"]
+        }
+    },
+    "include": ["./src/**/*", "./vite.config.ts", "./jest-setup.js"],
+    "ts-node": {
+        "require": ["tsconfig-paths/register"]
+    }
+}

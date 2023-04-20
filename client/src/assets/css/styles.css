@@ -1,0 +1,6 @@
+@import './_tailwind.css';
+@import './_fonts.css';
+
+html {
+  font-family: 'Moderat-Regular';
+}

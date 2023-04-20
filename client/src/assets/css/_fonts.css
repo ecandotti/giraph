@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Moderat-Regular';
+  src: local('Moderat-Regular'), local('Moderat-Regular'),
+    url('../fonts/Moderat-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat-Bold';
+  src: local('Moderat-Bold'), local('Moderat-Bold'),
+    url('../fonts/Moderat-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

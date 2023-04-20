@@ -1,0 +1,55 @@
+version: '3.4'
+
+services:
+    database:
+        image: postgres:15-alpine
+        restart: always
+        volumes:
+            - pgdata:/data/postgres
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: password
+    client:
+        container_name: client
+        build:
+            context: ./client
+            dockerfile: Dockerfile.local
+        restart: always
+        env_file: .env
+        ports:
+            - '${FRONTEND_PORT}:${FRONTEND_PORT}'
+        volumes:
+            - node_modules:/srv/giraph/client/node_modules
+            - ./client:/srv/giraph/client:rw
+        networks:
+            - giraph-network
+        command: 'npm run dev'
+    server:
+        container_name: server
+        build:
+            context: ./server
+            dockerfile: Dockerfile.local
+        # restart: always
+        env_file: .env
+        ports:
+            - '${BACKEND_PORT}:${BACKEND_PORT}'
+        volumes:
+            - node_modules:/srv/giraph/server/node_modules
+            - ./server:/srv/giraph/server:rw
+        networks:
+            - giraph-network
+        depends_on:
+            - database
+        links:
+            - database
+        command: 'npm run dev'
+
+volumes:
+    pgdata:
+    node_modules:
+
+networks:
+    giraph-network:
+        driver: bridge

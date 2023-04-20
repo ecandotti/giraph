@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"types": ["node"],
+		"typeRoots": ["app/types"],
+		"moduleResolution": "node",
+		"module": "ESNext",
+		"noEmit": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"target": "ESNext",
+		"baseUrl": ".",
+		"paths": {
+			"@client/*": ["client/*"],
+			"@server/*": ["server/*"],
+			"@root/*": ["./*"]
+		}
+	},
+	"include": ["./client/**/*", "./server/**/*"],
+	"exclude": ["node_modules", ".vscode"]
+}

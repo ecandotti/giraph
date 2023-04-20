@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "allowJs": true,
+        "outDir": "dist",
+        "strict": true,
+        "skipLibCheck": true,
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "typeRoots": ["node_modules/@types", "src/types"],
+        "types": ["node"],
+        "paths": {
+            "@assets/*": ["src/assets/*"],
+            "@configs/*": ["src/configs/*"],
+            "@controllers/*": ["src/controllers/*"],
+            "@controlgraphqllers/*": ["src/graphql/*"],
+            "@helpers/*": ["src/helpers/*"],
+            "@middlewares/*": ["src/middlewares/*"],
+            "@routes/*": ["src/routes/*"],
+            "@services/*": ["src/services/*"],
+            "@/types/*": ["src/types/*"],
+            "@src/*": ["src/*"]
+        }
+    },
+    "include": ["./src/**/*", "index.ts"],
+    "ts-node": {
+        "require": ["tsconfig-paths/register"]
+    }
+}

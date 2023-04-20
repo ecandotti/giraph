@@ -1,0 +1,5 @@
+FROM node:16-alpine
+WORKDIR /srv/giraph/client
+RUN apk add bash
+COPY . .
+RUN yarn install

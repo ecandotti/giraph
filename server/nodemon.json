@@ -1,0 +1,7 @@
+{
+    "watch": ["src", "prisma"],
+    "ext": ".ts, .js, .prisma",
+    "ignore": [],
+    "exec": "prisma generate && ts-node --files ./index.ts"
+}
+  

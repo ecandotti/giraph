@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p><strong>{{ username }}</strong>,</p>
+        <p>Nous sommes ravis de t'annoncer que ton compte a été créé avec succès. Explorez bien.</p>
+        <p>
+            On te tient informé de la suite par mail.
+        </p>
+        <p>Très bonne journée,</p>
+        <p>Cordialement,</p>
+        {% include "../includes/signature.html.twig" %}
+        <br>
+        {% include "../includes/unsubscribe.html.twig" with { unsubscribeLink: unsubscribeLink } %}
+    </body>
+</html>

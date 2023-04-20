@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p><strong>{{ username }}</strong>,</p>
+        <p>
+            Merci pour ton inscription. Afin finaliser la création de ton compte, 
+            merci de confirmer ton adresse mail : <a href="{{ confirmationLink }}">Confirmer mon email</a>
+        </p>
+        <p>Très bonne journée,</p>
+        <p>Cordialement,</p>
+        {% include "../includes/signature.html.twig" %}
+        <br>
+        {% include "../includes/unsubscribe.html.twig" with { unsubscribeLink: unsubscribeLink } %}
+    </body>
+</html>
